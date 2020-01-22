@@ -1,0 +1,182 @@
+$main-background-color: #FF9B71;
+$main-header-color: #1B998B;
+$todo-color: #FFFD82;
+$text-color: #4e4e4e;
+$link-color: #ED217C;
+$btn-desabled-color: #F96B7E;
+$btn-enabled-color: #F71735;
+$a-hover-color: #ffff00;
+
+
+#root {
+  background-color: $main-background-color;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Fira Sans', sans-serif;
+  color: $text-color;
+  height: 100vh;
+}
+
+#navbar {
+  background-color: $main-header-color;
+  color: $text-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dropdownMenuLink {
+  color: white;
+}
+
+main {
+  padding-top: 90px;
+  background-color: $main-background-color;
+}
+
+#link-main-page {
+  color: white;
+  font-size: 14px;
+  margin-left: 15px;
+  padding: 3px;
+}
+
+#link-login-page {
+  color: white;
+  font-size: 18px;
+  margin-right: 20px;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+#link-main-page:hover,
+#link-login-page:hover {
+  color: $a-hover-color;
+}
+
+.td-color {
+  color: $text-color;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.td-color:hover {
+  color: $text-color;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.new-todo {
+  padding: 30px;
+  background: $todo-color;
+}
+
+form input {
+  width: 300px;
+  margin: 0 5px 0 5px;
+}
+
+#btn-add {
+  background: $btn-desabled-color;
+  color: white;
+  border: 0px solid $text-color;
+  border-radius: 3px;
+}
+
+#btn-add:hover {
+  background: $btn-enabled-color;
+  color: $a-hover-color;
+}
+
+.btn-right-position {
+  margin-top: 10px;
+  margin-left: 210px;
+}
+
+#caption {
+  font-size: 30px;
+  font-weight: 700;
+  color: $text-color;
+  padding: 10px 0 10px 0;
+}
+
+.content {
+  background-color: $todo-color;
+  margin-top: 40px;
+  padding: 40px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todopanel {
+  display: flex;
+  border: 1px solid $text-color;
+  width: 400px;
+  font-size: 20px;
+  margin: 5px 0 5px 0;
+  padding: 5px 0 5px 0;
+}
+
+.todo {
+  width: 330px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.options {
+  width: 66px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.btn-opt {
+  background-color: $btn-desabled-color;
+  color: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.btn-opt:hover {
+  color: $a-hover-color;
+  text-decoration: none;
+  background: $btn-enabled-color;
+}
+
+.btn-enabled {
+  background-color: $btn-enabled-color;
+  color: #eaf207;
+}
+
+.btn-desabled {
+  background-color: $btn-desabled-color;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.not-completed {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  text-align: right;
+  padding: 30px 20px 0 0;
+}

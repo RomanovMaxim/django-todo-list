@@ -1,0 +1,172 @@
+#root {
+  background-color: #FF9B71;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Fira Sans', sans-serif;
+  color: #4e4e4e;
+  height: 100vh;
+}
+
+#navbar {
+  background-color: #1B998B;
+  color: #4e4e4e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dropdownMenuLink {
+  color: white;
+}
+
+main {
+  padding-top: 90px;
+  background-color: #FF9B71;
+}
+
+#link-main-page {
+  color: white;
+  font-size: 14px;
+  margin-left: 15px;
+  padding: 3px;
+}
+
+#link-login-page {
+  color: white;
+  font-size: 18px;
+  margin-right: 20px;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+#link-main-page:hover,
+#link-login-page:hover {
+  color: #ffff00;
+}
+
+.td-color {
+  color: #4e4e4e;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.td-color:hover {
+  color: #4e4e4e;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.new-todo {
+  padding: 30px;
+  background: #FFFD82;
+}
+
+form input {
+  width: 300px;
+  margin: 0 5px 0 5px;
+}
+
+#btn-add {
+  background: #F96B7E;
+  color: white;
+  border: 0px solid #4e4e4e;
+  border-radius: 3px;
+}
+
+#btn-add:hover {
+  background: #F71735;
+  color: #ffff00;
+}
+
+.btn-right-position {
+  margin-top: 10px;
+  margin-left: 210px;
+}
+
+#caption {
+  font-size: 30px;
+  font-weight: 700;
+  color: #4e4e4e;
+  padding: 10px 0 10px 0;
+}
+
+.content {
+  background-color: #FFFD82;
+  margin-top: 40px;
+  padding: 40px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todopanel {
+  display: flex;
+  border: 1px solid #4e4e4e;
+  width: 400px;
+  font-size: 20px;
+  margin: 5px 0 5px 0;
+  padding: 5px 0 5px 0;
+}
+
+.todo {
+  width: 330px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.options {
+  width: 66px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.btn-opt {
+  background-color: #F96B7E;
+  color: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.btn-opt:hover {
+  color: #ffff00;
+  text-decoration: none;
+  background: #F71735;
+}
+
+.btn-enabled {
+  background-color: #F71735;
+  color: #eaf207;
+}
+
+.btn-desabled {
+  background-color: #F96B7E;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.not-completed {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  text-align: right;
+  padding: 30px 20px 0 0;
+}

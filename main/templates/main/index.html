@@ -1,0 +1,62 @@
+{% extends "layout/basic.html" %}
+
+
+{% block content %}
+    {% if user.is_authenticated %}
+      <div class="new-todo">
+        <form method="POST" action="{% url 'main:add' %}">
+            {% csrf_token %}
+            {{ form }}
+            <button id='btn-add' type="submit">Добавить</button>
+        </form>
+      </div>
+
+      <section class="content">
+
+        <div id="caption">Список дел</div>
+
+        {% for todo in todos %}
+
+          <div class="todopanel">
+            <div class="todo">
+              <a href="{% url 'main:complete' todo.id %}" class="td-color">
+                {% if todo.is_completed %}
+                  <span class="completed">{{ todo.description }}</span>
+                {% else %}
+                  <span class="not-completed">{{ todo.description }}</span>
+                {% endif %}
+              </a>
+            </div>
+            <div class="options">
+              {% if todo.is_important %}
+                <a href="{% url 'main:important' todo.id %}" class="btn-opt btn-enabled" title="Важное"><i class="fas fa-star"></i></a>
+              {% else %}
+                <a href="{% url 'main:important' todo.id %}" class="btn-opt" title="Важное"><i class="fas fa-star"></i></a>
+              {% endif %}
+              <a href="{% url 'main:delete' todo.id %}" class="btn-opt" title="Удалить"><i class="fas fa-times"></i></a>
+            </div>
+          </div>
+
+        {% endfor %}
+
+      </section>
+
+    {% else %}
+
+      <section class="content">
+
+        <div id="caption">Список дел</div>
+
+        <div class="todopanel">
+          <div class="todo">
+            <span>Для работы с собственным списком дел выполните
+              <a id="td-color" href="{% url 'main:login' %}">вход</a>
+              или <a class="" href="{% url 'main:register' %}">зарегистрируйтесь</a></span>
+          </div>
+        </div>
+
+      </section>
+
+    {% endif %}
+
+{% endblock %}
