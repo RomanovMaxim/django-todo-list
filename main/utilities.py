@@ -20,7 +20,7 @@ from datetime import datetime
 from os.path import splitext
 
 def get_timestamp_path(instance, filename):
-    return f'{datetime.now().timestamp()}{splitext(filename)[1]}'
+    return "{}{}".format(datetime.now().timestamp(), splitext(filename)[1])
 
 def send_new_comment_notification(comment):
     if ALLOWED_HOSTS:
