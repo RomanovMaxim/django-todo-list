@@ -127,11 +127,12 @@ AUTH_USER_MODEL = 'main.AdvUser'
 # Перенаправление на страницу после входа
 LOGIN_REDIRECT_URL = 'main:index'
 
-# SMTP
-EMAIL_HOST = 'smtp.mail.ru'
-EMAIL_PORT = 2525
-EMAIL_HOST_USER = 'foxku@mail.ru'
-EMAIL_HOST_PASSWORD = 'zcxfcnkbdsq085'
+# SMTP google.com
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'activate.todo.list@gmail.com'
+EMAIL_HOST_PASSWORD = 'pokwfehikonfyjnn'
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-SERVER_EMAIL = EMAIL_HOST_USER
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# SERVER_EMAIL = EMAIL_HOST_USER
