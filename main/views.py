@@ -68,7 +68,7 @@ class ChangeUserInfoView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = AdvUser
     template_name = 'main/change_user_info.html'
     form_class = ChangeUserInfoForm
-    success_url = reverse_lazy('main:profile')
+    success_url = reverse_lazy('main:index')
     success_message = 'Личные данные пользователя изменены'
 
     # Получение ключа пользователя
@@ -87,7 +87,7 @@ from django.contrib.auth.views import PasswordChangeView
 
 class TodoPasswordChangeView(SuccessMessageMixin, LoginRequiredMixin, PasswordChangeView):
     template_name = 'main/password_change.html'
-    success_url = reverse_lazy('main:profile')
+    success_url = reverse_lazy('main:index')
     success_message = 'Пароль пользователя изменен'
 
 
