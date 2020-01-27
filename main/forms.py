@@ -31,8 +31,10 @@ class RegisterUserForm(forms.ModelForm):
 
     def clean_password1(self):
         password1 = self.cleaned_data['password1']
-        if password1:
+        try:
             password_validation.validate_password(password1)
+        except ValidationError as error:
+            self.add_error('password1', error)
         return password1
 
     def clean(self):
